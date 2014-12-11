@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MovieListViewController.h
 //  TopTomatoes
 //
 //  Created by Jeffrey Bergier on 12/10/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MovieListViewController : UIViewController
 
 @end
-

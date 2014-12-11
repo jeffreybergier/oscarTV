@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MovieListViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.apiKey = @"qe43pmsb84evcmyj43gbe7j8";
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    id initialViewController = [storyboard instantiateInitialViewController];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = initialViewController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
