@@ -204,6 +204,7 @@
 				TargetAttributes = {
 					737EA2B11A39404A009A285E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = V6ESYGU6CV;
 					};
 					737EA2CA1A39404A009A285E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -417,7 +418,9 @@
 			baseConfigurationReference = CBA4C506FD61A2CBAAD2C690 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TopTomatoes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -428,7 +431,9 @@
 			baseConfigurationReference = 81C5B41D7C076AF531643D06 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TopTomatoes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
