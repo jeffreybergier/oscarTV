@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		153207AFCBCB1BA766F75284 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4276BB286EF5BB5D475D56 /* libPods.a */; };
+		73337F6D1A3A87020046D51B /* MovieDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73337F6C1A3A87020046D51B /* MovieDetailTableViewCell.m */; };
 		737EA2B81A39404A009A285E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EA2B71A39404A009A285E /* main.m */; };
 		737EA2BB1A39404A009A285E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EA2BA1A39404A009A285E /* AppDelegate.m */; };
 		737EA2C11A39404A009A285E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737EA2BF1A39404A009A285E /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73337F6B1A3A87020046D51B /* MovieDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCell.h; sourceTree = "<group>"; };
+		73337F6C1A3A87020046D51B /* MovieDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCell.m; sourceTree = "<group>"; };
 		737EA2B21A39404A009A285E /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		737EA2B61A39404A009A285E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		737EA2B71A39404A009A285E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				737EA2DF1A39484A009A285E /* MovieTableViewCell.m */,
 				737EA2E11A39654A009A285E /* MovieDetailViewController.h */,
 				737EA2E21A39654A009A285E /* MovieDetailViewController.m */,
+				73337F6B1A3A87020046D51B /* MovieDetailTableViewCell.h */,
+				73337F6C1A3A87020046D51B /* MovieDetailTableViewCell.m */,
 				737EA2BF1A39404A009A285E /* Main.storyboard */,
 				737EA2C21A39404A009A285E /* Images.xcassets */,
 				737EA2C41A39404A009A285E /* LaunchScreen.xib */,
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				737EA2BB1A39404A009A285E /* AppDelegate.m in Sources */,
+				73337F6D1A3A87020046D51B /* MovieDetailTableViewCell.m in Sources */,
 				737EA2DD1A3942F7009A285E /* MovieListViewController.m in Sources */,
 				737EA2E31A39654A009A285E /* MovieDetailViewController.m in Sources */,
 				737EA2E01A39484A009A285E /* MovieTableViewCell.m in Sources */,

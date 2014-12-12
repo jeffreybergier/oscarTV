@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailViewController.h"
+#import "MovieDetailTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface MovieDetailViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -36,54 +37,13 @@
     self.detailsTableView.delegate = self;
     self.detailsTableView.backgroundColor = [UIColor clearColor];
     self.posterImageView.contentMode = UIViewContentModeScaleAspectFill;
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     //
-    // I really regret adding these timers.
-    // Storyboards take over the init of the view controller.
-    // Its impossible to control the order that things happen.
-    // Usually the MovieDictionary is set before viewDidLoad Happens
-    // This means all the interface builder objects are still NIL
-    // Therefore in ViewWillAppear we need to check to make sure that movie dictionary items have been set and then configure everything.
-    // However, if the dictionary has not been set then the user will get a big blank white screen with missing information.
-    // The timers solve that problem. They check every 0.5 seconds to make sure the data came back. If it did, the timer cancels itself.
+    // if the movieDictionary is set at this point, then we know we can update all the labels and images with the necessary values
     //
-    
-    if (self.posterImageView && self.movieDictionary) {
-        [self setImage:nil];
-    } else {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(setImage:) userInfo:nil repeats:YES];
-        [timer fire];
-    }
-    
-    if (self.detailsTableView && self.movieArray) {
-        [self reloadTable:nil];
-    } else {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(reloadTable:) userInfo:nil repeats:YES];
-        [timer fire];
-    }
-    
-    if (self.movieArray) {
-        [self setTitleTimer:nil];
-    } else {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(setTitleTimer:) userInfo:nil repeats:YES];
-        [timer fire];
-    }
-}
-
--(void)setTitleTimer:(NSTimer *) timer {
-    if (self.movieArray) {
-        [timer invalidate];
+    if (self.movieDictionary) {
         self.title = self.movieArray[0];
-    }
-}
-
--(void)setImage: (NSTimer *) timer {
-    if (self.posterImageView && self.movieDictionary) {
-        [timer invalidate];
+        [self.detailsTableView reloadData];
         [self.posterImageView setImageWithURLRequest:[NSURLRequest requestWithURL:self.posterThumbnailURL]
                                     placeholderImage:nil
                                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -94,14 +54,7 @@
                                                  [self.posterImageView setImageWithURL:self.posterOriginalURL];
                                              }];
     } else {
-        NSLog(@"Timer Fired and Failed");
-    }
-}
-
--(void)reloadTable: (NSTimer *) timer {
-    if (self.detailsTableView && self.movieArray) {
-        [timer invalidate];
-        [self.detailsTableView reloadData];
+        NSLog(@"Error Loading Movie Details");
     }
 }
 
@@ -140,7 +93,24 @@
     }
 }
 
-- (IBAction)didTapOpenCloseDetailsButton:(UIButton *)sender {
+- (IBAction)didTapToShowPoster:(UITapGestureRecognizer *)sender {
+    if (self.navigationController.navigationBarHidden) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    } else {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
+    
+    if (self.detailsAreOpen) {
+        [self didTapOpenCloseDetailsButton: sender];
+    }
+}
+
+- (IBAction)didTapOpenCloseDetailsButton:(id) sender {
+    if (![sender isKindOfClass:[UITapGestureRecognizer class]]) {
+        if (self.navigationController.navigationBarHidden) {
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
+        }
+    }
     self.openCloseDetailsButton.titleLabel.textColor = [UIColor blackColor];
     if (self.detailsAreOpen) {
         [self.openCloseDetailsButton setTitle:@"–––––––––– Open ––––––––––" forState: UIControlStateNormal];
@@ -174,31 +144,25 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell;
+    MovieDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieDetailCell"];
     
     switch (indexPath.row) {
         case 0:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MovieTitle"];
-            cell.textLabel.text = @"Title";
+            cell.subheadTextLabel.text = @"Title";
             break;
         case 1:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MovieReleaseYear"];
-            cell.textLabel.text = @"Release Year";
+            cell.subheadTextLabel.text = @"Release Year";
             break;
         case 2:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCast"];
-            cell.textLabel.text = @"Cast";
+            cell.subheadTextLabel.text = @"Cast";
             break;
         case 3:
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MovieDescription"];
-            cell.textLabel.text = @"Synopsis";
+            cell.subheadTextLabel.text = @"Synopsis";
             break;
         default:
             break;
     }
-    cell.detailTextLabel.text = self.movieArray[indexPath.row];
-    cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.bodytypeTextLabel.text = self.movieArray[indexPath.row];
     return cell;
 }
 
