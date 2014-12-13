@@ -42,8 +42,11 @@
     // if the movieDictionary is set at this point, then we know we can update all the labels and images with the necessary values
     //
     if (self.movieDictionary) {
+        //set the title of the view controller. this shows in the navigation bar
         self.title = self.movieArray[0];
+        //tell the table to reload the data with the array.
         [self.detailsTableView reloadData];
+        //the poster images can sometimes be quite large (several MB). This line of code sets the image to the small thumbnail view. Then when success or failure is called, we start downloading the big one. Once the big one comes in, the image is set.
         [self.posterImageView setImageWithURLRequest:[NSURLRequest requestWithURL:self.posterThumbnailURL]
                                     placeholderImage:nil
                                              success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -61,17 +64,20 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    //for some reason this tintcolor code doesn't work until viewWillAppear.
+    //for some reason this tintcolor code doesn't work until viewDidAppear.
     self.openCloseDetailsButton.titleLabel.textColor = self.openCloseDetailsButton.tintColor;
 }
 
 - (void)setMovieDictionary:(NSDictionary *)movieDictionary {
     if ([movieDictionary isKindOfClass:[NSDictionary class]]) {
         
+        //Start extracting the key components out of the dictionary
         NSString *movieTitle = movieDictionary[@"title"];
         NSString *movieReleaseYear = ((NSNumber *)movieDictionary[@"year"]).stringValue;
         NSString *movieDescription = movieDictionary[@"synopsis"];
         
+        //The list of cast members is an array of dictionarys
+        //We'll loop through the array to get out the name and create a string with it
         NSMutableString *castMutString = [[NSMutableString alloc] initWithFormat:@""];
         NSArray *castArray = movieDictionary[@"abridged_cast"];
         for (NSDictionary *item in castArray) {
@@ -81,14 +87,17 @@
         }
         NSString *castString = [[NSString alloc] initWithString:castMutString];
         
+        //once we get all the items we need out the dictionary. We put them in the array that will be the data source of our tableview.
         self.movieArray = @[movieTitle, movieReleaseYear, castString, movieDescription];
         
+        //lastly, we get the posters we need and build the NSURL's with them so we can set the image with them in ViewDidLoad
         NSDictionary *posters = movieDictionary[@"posters"];
         NSString *thumbString = posters[@"thumbnail"];
         NSString *originalString = posters[@"original"];
         self.posterThumbnailURL = [[NSURL alloc] initWithString:thumbString];
         self.posterOriginalURL = [[NSURL alloc] initWithString:originalString];
         
+        //lastly, in a custom setter, you have to actually set the property
         _movieDictionary = movieDictionary;
     }
 }
