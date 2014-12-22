@@ -1,9 +1,4 @@
 //
-//  MovieDetailTableViewCell.m
-//  TopTomatoes
-//
-//  Created by Jeffrey Bergier on 12/11/14.
-//
 // The MIT License (MIT)
 //
 // Copyright (c) 2014 Jeffrey Bergier
@@ -26,14 +21,3 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 //
-
-#import "MovieDetailTableViewCell.h"
-
-@implementation MovieDetailTableViewCell
-
-- (void)awakeFromNib {
-    self.backgroundColor = [UIColor clearColor];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-}
-
-@end
