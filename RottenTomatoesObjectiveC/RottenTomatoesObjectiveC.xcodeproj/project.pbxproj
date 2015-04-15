@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		7381CB0A1ADCC9720028D1C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB091ADCC9720028D1C5 /* main.m */; };
 		7381CB0D1ADCC9720028D1C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB0C1ADCC9720028D1C5 /* AppDelegate.m */; };
-		7381CB101ADCC9720028D1C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB0F1ADCC9720028D1C5 /* ViewController.m */; };
 		7381CB131ADCC9720028D1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7381CB111ADCC9720028D1C5 /* Main.storyboard */; };
 		7381CB151ADCC9720028D1C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7381CB141ADCC9720028D1C5 /* Images.xcassets */; };
 		7381CB181ADCC9720028D1C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381CB161ADCC9720028D1C5 /* LaunchScreen.xib */; };
 		7381CB241ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB231ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m */; };
+		7381CB5F1ADE2C8E0028D1C5 /* MovieListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		7381CB091ADCC9720028D1C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7381CB0B1ADCC9720028D1C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7381CB0C1ADCC9720028D1C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7381CB0E1ADCC9720028D1C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7381CB0F1ADCC9720028D1C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7381CB121ADCC9720028D1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7381CB141ADCC9720028D1C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7381CB171ADCC9720028D1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7381CB1D1ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenTomatoesObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7381CB221ADCC9720028D1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7381CB231ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenTomatoesObjectiveCTests.m; sourceTree = "<group>"; };
+		7381CB5D1ADE2C8E0028D1C5 /* MovieListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListTableViewController.h; sourceTree = "<group>"; };
+		7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				7381CB0B1ADCC9720028D1C5 /* AppDelegate.h */,
 				7381CB0C1ADCC9720028D1C5 /* AppDelegate.m */,
-				7381CB0E1ADCC9720028D1C5 /* ViewController.h */,
-				7381CB0F1ADCC9720028D1C5 /* ViewController.m */,
+				7381CB5D1ADE2C8E0028D1C5 /* MovieListTableViewController.h */,
+				7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */,
 				7381CB111ADCC9720028D1C5 /* Main.storyboard */,
 				7381CB141ADCC9720028D1C5 /* Images.xcassets */,
 				7381CB161ADCC9720028D1C5 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7381CB101ADCC9720028D1C5 /* ViewController.m in Sources */,
+				7381CB5F1ADE2C8E0028D1C5 /* MovieListTableViewController.m in Sources */,
 				7381CB0D1ADCC9720028D1C5 /* AppDelegate.m in Sources */,
 				7381CB0A1ADCC9720028D1C5 /* main.m in Sources */,
 			);
