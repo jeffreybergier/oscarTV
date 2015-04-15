@@ -10,6 +10,10 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *upperTextField;
+@property (weak, nonatomic) IBOutlet UIButton *upperUpdateButton;
+@property (weak, nonatomic) IBOutlet UILabel *lowerTextLabel;
+
 @end
 
 @implementation ViewController
@@ -22,6 +26,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)update:(UIButton *)sender {
+    NSString *textFromTextField = self.upperTextField.text;
+    self.lowerTextLabel.text = textFromTextField;
 }
 
 @end
