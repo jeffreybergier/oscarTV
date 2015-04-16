@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="115" id="Cx4-tq-ge6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="115" id="Cx4-tq-ge6" customClass="MovieTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cx4-tq-ge6" id="L0y-ff-ZT4">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -36,6 +36,11 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieDescriptionLabel" destination="agu-7r-j6O" id="RhR-w0-qLB"/>
+                                    <outlet property="moviePosterImageView" destination="RCy-un-z5g" id="VUq-eV-Vej"/>
+                                    <outlet property="movieTitleLabel" destination="g8x-jm-0yy" id="9AN-uG-ANI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

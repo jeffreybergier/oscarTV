@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="115" id="DWu-kX-tP6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="115" id="DWu-kX-tP6" customClass="MovieTableViewCell" customModule="RottenTomatoesSwift" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DWu-kX-tP6" id="ON0-2j-Jct">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -36,6 +36,11 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieDescriptionLabel" destination="D3K-ck-xkA" id="VAT-nd-qkq"/>
+                                    <outlet property="moviePosterImageView" destination="fkC-1G-zvp" id="4zZ-pn-7Tp"/>
+                                    <outlet property="movieTitleLabel" destination="af5-Fv-QBU" id="hnR-aY-CLi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

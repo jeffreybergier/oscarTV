@@ -7,6 +7,7 @@
 //
 
 #import "MovieListTableViewController.h"
+#import "MovieTableViewCell.h"
 
 @interface MovieListTableViewController()
 
@@ -24,7 +25,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+    MovieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+    cell.movieTitleLabel.text = [NSString stringWithFormat:@"This is Cell Number %d", indexPath.row];
     return cell;
 }
 

@@ -14,6 +14,7 @@
 		7381CB181ADCC9720028D1C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381CB161ADCC9720028D1C5 /* LaunchScreen.xib */; };
 		7381CB241ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB231ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m */; };
 		7381CB5F1ADE2C8E0028D1C5 /* MovieListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */; };
+		7381CB641ADF7F9A0028D1C5 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB631ADF7F9A0028D1C5 /* MovieTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7381CB231ADCC9720028D1C5 /* RottenTomatoesObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RottenTomatoesObjectiveCTests.m; sourceTree = "<group>"; };
 		7381CB5D1ADE2C8E0028D1C5 /* MovieListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListTableViewController.h; sourceTree = "<group>"; };
 		7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListTableViewController.m; sourceTree = "<group>"; };
+		7381CB621ADF7F9A0028D1C5 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		7381CB631ADF7F9A0028D1C5 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				7381CB0C1ADCC9720028D1C5 /* AppDelegate.m */,
 				7381CB5D1ADE2C8E0028D1C5 /* MovieListTableViewController.h */,
 				7381CB5E1ADE2C8E0028D1C5 /* MovieListTableViewController.m */,
+				7381CB621ADF7F9A0028D1C5 /* MovieTableViewCell.h */,
+				7381CB631ADF7F9A0028D1C5 /* MovieTableViewCell.m */,
 				7381CB111ADCC9720028D1C5 /* Main.storyboard */,
 				7381CB141ADCC9720028D1C5 /* Images.xcassets */,
 				7381CB161ADCC9720028D1C5 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				7381CB5F1ADE2C8E0028D1C5 /* MovieListTableViewController.m in Sources */,
 				7381CB0D1ADCC9720028D1C5 /* AppDelegate.m in Sources */,
+				7381CB641ADF7F9A0028D1C5 /* MovieTableViewCell.m in Sources */,
 				7381CB0A1ADCC9720028D1C5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

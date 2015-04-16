@@ -20,7 +20,8 @@ class MovieListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieTableViewCell
+        cell?.movieTitleLabel.text = "This is cell number \(indexPath.row)"
         return cell!
     }
     

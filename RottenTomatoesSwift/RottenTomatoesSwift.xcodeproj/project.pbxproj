@@ -13,6 +13,7 @@
 		7381CB461ADCC9990028D1C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7381CB441ADCC9990028D1C5 /* LaunchScreen.xib */; };
 		7381CB521ADCC9990028D1C5 /* RottenTomatoesSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB511ADCC9990028D1C5 /* RottenTomatoesSwiftTests.swift */; };
 		7381CB5C1ADE2B9E0028D1C5 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB5B1ADE2B9E0028D1C5 /* MovieListTableViewController.swift */; };
+		7381CB611ADF7E720028D1C5 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7381CB601ADF7E720028D1C5 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7381CB501ADCC9990028D1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7381CB511ADCC9990028D1C5 /* RottenTomatoesSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenTomatoesSwiftTests.swift; sourceTree = "<group>"; };
 		7381CB5B1ADE2B9E0028D1C5 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		7381CB601ADF7E720028D1C5 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				7381CB3B1ADCC9990028D1C5 /* AppDelegate.swift */,
 				7381CB5B1ADE2B9E0028D1C5 /* MovieListTableViewController.swift */,
+				7381CB601ADF7E720028D1C5 /* MovieTableViewCell.swift */,
 				7381CB3F1ADCC9990028D1C5 /* Main.storyboard */,
 				7381CB421ADCC9990028D1C5 /* Images.xcassets */,
 				7381CB441ADCC9990028D1C5 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				7381CB5C1ADE2B9E0028D1C5 /* MovieListTableViewController.swift in Sources */,
 				7381CB3C1ADCC9990028D1C5 /* AppDelegate.swift in Sources */,
+				7381CB611ADF7E720028D1C5 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
