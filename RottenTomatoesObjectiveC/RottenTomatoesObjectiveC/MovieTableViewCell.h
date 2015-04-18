@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieDescriptionLabel;
 
+@property (strong, nonatomic) NSURL *posterURL;
+
 @end

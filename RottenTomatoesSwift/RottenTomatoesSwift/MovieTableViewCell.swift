@@ -14,4 +14,6 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieDescriptionLabel: UILabel!
     
+    var posterURL: NSURL?
+    
 }

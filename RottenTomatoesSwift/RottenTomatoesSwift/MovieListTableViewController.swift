@@ -51,10 +51,46 @@ class MovieListTableViewController: UITableViewController {
             let movieTitle = movie["title"] as? String ?? "Title Not Found"
             let movieDescription = movie["synopsis"] as? String ?? "Synopsys Not Found"
             
+            cell?.moviePosterImageView.image = nil // Need to clear the image before we start downloading a new one.
             cell?.movieTitleLabel.text = movieTitle
             cell?.movieDescriptionLabel.text = movieDescription
+            
+            if let posterDictionary = movie["posters"] as? NSDictionary,
+                let posterURLString = posterDictionary["thumbnail"] as? String,
+                let posterURL = NSURL(string: posterURLString) {
+                    cell?.posterURL = posterURL
+                    self.downloadImageURL(posterURL, ForCell: cell)
+            }
         }
         return cell!
+    }
+    
+    func downloadImageURL(downloadURL: NSURL, ForCell cell: MovieTableViewCell?) {
+        let request = NSURLRequest(URL: downloadURL, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (downloadedData, response, error) in
+            if let httpResponse = response as? NSHTTPURLResponse {
+                switch httpResponse.statusCode {
+                case 200:
+                    // Grab the main queue because NSURLSession can callback on any
+                    // queue and we're touching non-atomic properties and the UI
+                    dispatch_async(dispatch_get_main_queue()) {
+                        if httpResponse.URL == cell?.posterURL {
+                            let image = UIImage(data: downloadedData)
+                            cell?.moviePosterImageView.image = image
+                        } else {
+                            // The URL's don't match. That means that the cell has been "Reused" since starting this download
+                            // We can discard this download and do nothing
+                            // Hopefully, the appropriate downloaded for this cell has already started
+                            // If we were serious about error handling, we would have a way to verify that.
+                            NSLog("URL's Don't match: Download \(httpResponse.URL). Cell \(cell?.posterURL)")
+                        }
+                    }
+                default:
+                    break //handle http errors here
+                }
+            }
+        })
+        task.resume()
     }
     
 }
