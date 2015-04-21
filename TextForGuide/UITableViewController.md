@@ -47,4 +47,4 @@ We’re going to throw the previous View Controller and start over with a UITabl
 	* Explain how ```tableView:cellForRowAtIndexPath``` is customizing each cell before it gets displayed in the tableView
 
 ### Project Files
-* [Project files at the end of this section](/releases/tag/v0.3-TableCellsDone)
+* [Project files at the end of this section](/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.3-TableCellsDone)

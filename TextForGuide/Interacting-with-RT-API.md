@@ -18,8 +18,8 @@ In this section, we’re going to download the a JSON file from Rotten Tomatoes 
 1. Next, call ```reloadData``` on ```self.tableView```.
 	* Calling to the main queue is important because the property we are modifying is non-atomic and reloadData updates the UI.
 1. Refer to Screenshots for Details
-	* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/rottenTomatoesJSON01_objc.png)
-	* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/rottenTomatoesJSON01_swift.png)
+	* [Objective-C Reference Screenshot](/ImagesForGuide/rottenTomatoesJSON01_objc.png)
+	* [Swift Reference Screenshot](/ImagesForGuide/rottenTomatoesJSON01_swift.png)
 
 ### Configure TableView with Movie Data
 1. In ```tableView:numberOfRowsInSection:``` return the count of the ```self.moviesArray.count```
@@ -28,8 +28,8 @@ In this section, we’re going to download the a JSON file from Rotten Tomatoes 
 1. Use these two strings to populate the ```titleLabel``` and the ```descriptionLabel``` in the cell.
 1. Run the app in the simulator and make sure the Title text and Description text is showing up in the tableView.
 1. Refer to Screenshots for Details
-	* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/rottenTomatoesJSON01_objc.png)
-	* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/rottenTomatoesJSON01_swift.png)
+	* [Objective-C Reference Screenshot](/ImagesForGuide/rottenTomatoesJSON01_objc.png)
+	* [Swift Reference Screenshot](/ImagesForGuide/rottenTomatoesJSON01_swift.png)
 
 ### Project Files
-* [Project files at the end of this section](/jeffreybergier/RottenTomatoesGuide/releases/tag/v0.4-RotTomInteractionDone)
+* [Project files at the end of this section](/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.4-RotTomInteractionDone)

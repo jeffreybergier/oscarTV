@@ -9,8 +9,8 @@ The concept of reusable cells is pretty hard for a beginner to grasp. Based on t
 
 ### 1) Add Property to MovieTableViewCell
 1. Open the MovieTableViewCell file (.h file in Objective C, Swift file in Swift). Add a strong property called ```posterURL``` of type NSURL (NSURL? in Swift).
-	* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload01_objc.png)
-	* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload01_swift.png)
+	* [Objective-C Reference Screenshot](/ImagesForGuide/imageDownload01_objc.png)
+	* [Swift Reference Screenshot](/ImagesForGuide/imageDownload01_swift.png)
 
 ### 2) Add Method to MovieListTableViewController
 1. Add a method that returns void and takes an NSURL to download and a MovieTableViewCell instance so it this method can set the image in the cell’s Image View
@@ -25,8 +25,8 @@ The concept of reusable cells is pretty hard for a beginner to grasp. Based on t
 	* Don’t forget that Objective-C requires calling isEqual, not using ==
 1. Create a ```UIImage``` from the data returned by the completed data task.
 1. Set the Image View of the cell to the new image.
-	* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload02_objc.png)
-	* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload02_swift.png)
+	* [Objective-C Reference Screenshot](/ImagesForGuide/imageDownload02_objc.png)
+	* [Swift Reference Screenshot](/ImagesForGuide/imageDownload02_swift.png)
 
 ### 3) Modify CellForRowAtIndexPath
 1. Near where the title and description labels of the cell are being set, set ```moviePosterImageView.image``` property to nil.
@@ -35,8 +35,8 @@ The concept of reusable cells is pretty hard for a beginner to grasp. Based on t
 1. Create a String from the “thumbnail” key of the posters dictionary.
 1. Create an NSURL from the thumbnail string. Then set the ```posterURL``` property of the cell to this string.
 1. Lastly, call ```downloadImageURL:ForCell:``` on self. This will start the image download.
-	* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload03_objc.png)
-	* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload03_swift.png)
+	* [Objective-C Reference Screenshot](/ImagesForGuide/imageDownload03_objc.png)
+	* [Swift Reference Screenshot](/ImagesForGuide/imageDownload03_swift.png)
 
 ### 4) (Optional) Experiment
 If time allows, try experimenting by commenting out the parts of the code that protect against cell reuse bugs.
@@ -46,6 +46,6 @@ If time allows, try experimenting by commenting out the parts of the code that p
 * Comment out the if statement that checks to make sure the ```posterURL``` matches the ```downloadURL``` and show how the wrong images get set to the wrong cells.
 
 ### Project Files
-* [Objective-C Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload04_objc.png)
-* [Swift Reference Screenshot](/jeffreybergier/RottenTomatoesGuide/blob/master/ImagesForGuide/imageDownload04_swift.png)
-* [Project files at the end of this section](/jeffreybergier/RottenTomatoesGuide/releases/tag/v0.5-ImagesSectionDone)
+* [Objective-C Reference Screenshot](/ImagesForGuide/imageDownload04_objc.png)
+* [Swift Reference Screenshot](/ImagesForGuide/imageDownload04_swift.png)
+* [Project files at the end of this section](/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.5-ImagesSectionDone)
