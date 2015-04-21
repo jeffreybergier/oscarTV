@@ -10,7 +10,7 @@ This curriculum is designed to help a relatively experienced iOS developer, go t
 Make a simple UITableViewController based app that displays a list of data from the [[Rotten Tomatoes API. | http://developer.rottentomatoes.com]]
 
 ### Sections
-1. [[Introductions | Class-Introductions]]
+1. [Class Introductions](/TextForGuide/Class-Introductions.md)
 1. [[iOS UI Paradigms and Design | iOS-UI-Paradigms]]
 1. [[Understanding how Interface Builder Connects with Code | Interface-Builder]]
 1. [[Using UITableViewController and Prototype Cells | UITableViewController]]
