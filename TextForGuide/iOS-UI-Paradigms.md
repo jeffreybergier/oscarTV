@@ -40,6 +40,7 @@ Its important that the students have a basic understanding of how most apps work
 
 ### Demonstrate Paradigms with Quicktime
 In Mac OS X Yosemite, Quicktime can show and record the screen from iPhone’s plugged in via USB. This is a great way to demonstrate these UI Paradigms for students. Show the music and/or messages app to show how Apple uses all the concepts above. To get quicktime to show your phone follow the steps below:
+
 1. Open Quicktime Player and choose File > New Movie Recording. [Reference Screenshot](/ImagesForGuide/qtScreenRecording01.png)
 1. Next to the Record button in the video UI that appears, is a small down facing triangle. Click on that to open a menu. [Reference Screenshot](/ImagesForGuide/qtScreenRecording02.png)
 1. Choose your iPhone from the list. After a few seconds, the iPhone screen should appear in the Quicktime Video UI. [Reference Screenshot](/ImagesForGuide/qtScreenRecording03.png)
