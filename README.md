@@ -19,4 +19,4 @@ Make a simple UITableViewController based app that displays a list of data from 
 1. [Next Steps](/TextForGuide/NeXTSTEPs.md)
 
 ### Screenshot
-[]()
+![Image of Final App](/ImagesForGuide/appPreview.png)
