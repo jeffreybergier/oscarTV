@@ -17,3 +17,6 @@ Make a simple UITableViewController based app that displays a list of data from 
 1. [Interacting with Rotten Tomatoes API](/TextForGuide/Interacting-with-RT-API.md)
 1. [Downloading Images and Placing Them In Cells](/TextForGuide/Downloading-Poster-Art.md)
 1. [Next Steps](/TextForGuide/NeXTSTEPs.md)
+
+### Screenshot
+[]()
