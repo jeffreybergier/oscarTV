@@ -1,6 +1,6 @@
 ## Next Steps
 ### Congratulations. Now take a break.
-Congratulations is in order for you and your students. Its been a long day and you’ve finished a pretty sophisticated app. That being said, its been a long day and its time to take a break, socialize and let the learning from the day sink in.
+Congratulations are in order for you and your students. You’ve finished a pretty sophisticated app. That being said, its been a long day and its time to take a break, socialize and let the learning from the day sink in.
 
 ### Practice, Practice, Practice
 Afterward, its important to practice more and learn more. Today, we covered the fundamentals of iOS, but its just the tip of the iceberg. In order to learn iOS, you’ll have to keep working on it. Below are some ideas of things to do after this workshop.
