@@ -31,4 +31,4 @@ In this section, we’re finally going to be in Xcode. We are going to start wit
 1. Optionally, show how to get multiple lines of text in the text label.
 
 ### Project Files
-* [Project Files at the end of this section](/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.2-InterfaceBuilderDone)
+* [Project Files at the end of this section](http://github.com/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.2-InterfaceBuilderDone)
