@@ -159,6 +159,8 @@
 		7381CB2E1ADCC9990028D1C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MobileBridge;
 				TargetAttributes = {
@@ -415,6 +417,7 @@
 				7381CB571ADCC9990028D1C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7381CB581ADCC9990028D1C5 /* Build configuration list for PBXNativeTarget "RottenTomatoesSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				7381CB5A1ADCC9990028D1C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

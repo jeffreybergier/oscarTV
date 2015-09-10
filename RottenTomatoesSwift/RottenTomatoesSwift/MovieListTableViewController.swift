@@ -23,7 +23,7 @@ class MovieListTableViewController: UITableViewController {
                 switch httpResponse.statusCode {
                 case 200:
                     if let data = downloadedData,
-                        let json = NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments, error: nil) as? NSDictionary,
+                        let json = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? NSDictionary,
                         let moviesArray = json["movies"] as? [NSDictionary] {
                             // Grab the main queue because NSURLSession can callback on any 
                             // queue and we're touching non-atomic properties and the UI
@@ -75,7 +75,7 @@ class MovieListTableViewController: UITableViewController {
                     // queue and we're touching non-atomic properties and the UI
                     dispatch_async(dispatch_get_main_queue()) {
                         if httpResponse.URL == cell?.posterURL {
-                            let image = UIImage(data: downloadedData)
+                            let image = UIImage(data: downloadedData!)
                             cell?.moviePosterImageView.image = image
                         } else {
                             // The URL's don't match. That means that the cell has been "Reused" since starting this download
