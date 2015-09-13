@@ -48,7 +48,6 @@ In this section we are going to improve the code with nice swift features and ot
 1. In the downloader file, declare a class protocol called DownloaderDelegate with func downloadFinishedForURL(finishedURL: NSURL) as its only method
 	1. In the Downloader class add a weak var for this delegate type called delegate
 	1. In the switch 200 case for the downloaded file, remove the print line and add self.delegate?.downloadFinishedForURL()
-		* Reference Screenshot
 		* [Screenshot](/ImagesForGuide/swiftNiceDownloaderProtocol.png)
 1. In the ViewController, add an extension that adds compliance for the DownloaderDelegate protocol
 	1. in the required method, just print the URL that finishes downloading.

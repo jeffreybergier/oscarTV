@@ -20,6 +20,8 @@ class MovieListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Top Movies"
+        
         self.downloader.delegate = self
         self.downloader.beginDownloadingURL(self.jsonURL)
     }
