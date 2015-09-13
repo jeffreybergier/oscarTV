@@ -43,4 +43,4 @@ In this section, we’re going to download the a JSON file from Rotten Tomatoes 
 	* [Swift Reference Screenshot](/ImagesForGuide/rottenTomatoesJSON01_swift.png)
 
 ### Project Files
-* [Project files at the end of this section](http://github.com/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.4-RotTomInteractionDone)
+* Project files are out of date because of ATS in iOS9. Please refer to the finished project in the repo to see full implementation.
