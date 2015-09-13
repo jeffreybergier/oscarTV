@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -25,28 +24,27 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jlW-xS-116">
-                                            <rect key="frame" x="8" y="8" width="304" height="144.5"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-1G-zvp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="4" height="6.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-1G-zvp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="104"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="fkC-1G-zvp" secondAttribute="height" multiplier="0.675:1" id="Idz-Ft-mlB"/>
                                                         <constraint firstAttribute="width" constant="70" id="jBd-b0-vKx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O78-Xw-hFz">
-                                                    <rect key="frame" x="12" y="0.0" width="292" height="144.5"/>
+                                                    <rect key="frame" x="78" y="0.0" width="226" height="104"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Sherlock Holmes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-Fv-QBU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="292" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="226" height="19.5"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3K-ck-xkA">
-                                                            <rect key="frame" x="0.0" y="20" width="292" height="124.5"/>
+                                                            <rect key="frame" x="0.0" y="19" width="226" height="84.5"/>
                                                             <animations/>
                                                             <string key="text">Directed by Guy Ritchie. With Robert Downey Jr., Jude Law, Jared Harris, Rachel McAdams. Sherlock Holmes and his sidekick Dr. Watson join forces to outwit and bring down their fiercest adversary, Professor Moriarty.</string>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -58,6 +56,9 @@
                                                 </stackView>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="fkC-1G-zvp" firstAttribute="height" secondItem="jlW-xS-116" secondAttribute="height" id="xjh-7l-hg9"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <animations/>
