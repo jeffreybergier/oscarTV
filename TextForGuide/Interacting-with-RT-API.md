@@ -23,6 +23,7 @@ In this section, we’re going to download the a JSON file from Rotten Tomatoes 
 
 ### 3) Extract Movie Data from JSON
 1. Add an NSLog to print the JSON data so the students can see what they are starting with.
+1. Run the project to get that print of the JSON data.
 1. Use ```NSJSONSerialization JSONObjectWithData:options:error``` to convert the downloaded data into an NSDictionary
 1. Create an NSArray from the “movies” key of the JSON Dictionary
 1. Next, dispatch into the main thread. Set the ```moviesArray``` property to the array you just extracted in the step above.
