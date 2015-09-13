@@ -59,13 +59,13 @@ class MovieListTableViewController: UITableViewController {
                 let posterURLString = posterDictionary["thumbnail"] as? String,
                 let posterURL = NSURL(string: posterURLString) {
                     cell?.posterURL = posterURL
-                    self.downloadImageURL(posterURL, ForCell: cell)
+                    self.downloadImageURL(posterURL, forCell: cell)
             }
         }
         return cell!
     }
     
-    func downloadImageURL(downloadURL: NSURL, ForCell cell: MovieTableViewCell?) {
+    func downloadImageURL(downloadURL: NSURL, forCell cell: MovieTableViewCell?) {
         let request = NSURLRequest(URL: downloadURL, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (downloadedData, response, error) in
             if let httpResponse = response as? NSHTTPURLResponse {

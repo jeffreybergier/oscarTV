@@ -70,12 +70,12 @@
     NSURL *posterURL = [[NSURL alloc] initWithString:posterURLString];
     
     cell.posterURL = posterURL;
-    [self downloadImageURL:posterURL ForCell:cell];
+    [self downloadImageURL:posterURL forCell:cell];
     
     return cell;
 }
 
--(void)downloadImageURL:(NSURL *)downloadURL ForCell:(MovieTableViewCell *)cell {
+-(void)downloadImageURL:(NSURL *)downloadURL forCell:(MovieTableViewCell *)cell {
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:downloadURL cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:10.0];
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *downloadedData, NSURLResponse *response, NSError *error) {
         if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
