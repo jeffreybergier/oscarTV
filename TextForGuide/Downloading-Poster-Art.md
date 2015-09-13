@@ -48,4 +48,4 @@ If time allows, try experimenting by commenting out the parts of the code that p
 ### Project Files
 * [Objective-C Reference Screenshot](/ImagesForGuide/imageDownload04_objc.png)
 * [Swift Reference Screenshot](/ImagesForGuide/imageDownload04_swift.png)
-* [Project files at the end of this section](http://github.com/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.5-ImagesSectionDone)
+* [Project files at the end of this section](http://github.com/mobilebridge/iosbridge-rottentomatoes/releases/tag/v0.6-Working-App)
