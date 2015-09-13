@@ -10,9 +10,18 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var moviePosterImageView: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieDescriptionLabel: UILabel!
+    var model: Movie? {
+        didSet {
+            guard let newMovie = self.model else  { return }
+            self.movieTitleLabel.text = newMovie.title
+            self.movieDescriptionLabel.text = newMovie.description
+            self.moviePosterImageView.image = .None
+        }
+    }
+    
+    @IBOutlet private weak var moviePosterImageView: UIImageView!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var movieDescriptionLabel: UILabel!
     
     var posterURL: NSURL?
     

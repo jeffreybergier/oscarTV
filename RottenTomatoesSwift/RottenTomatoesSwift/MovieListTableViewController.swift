@@ -10,34 +10,21 @@ import UIKit
 
 class MovieListTableViewController: UITableViewController {
     
-    var moviesArray: [NSDictionary]?
+    private var moviesArray: [NSDictionary]?
+    private let downloader = Downloader()
+    private let jsonURL: NSURL = {
+        let apiKey = "qe43pmsb84evcmyj43gbe7j8"
+        return NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=\(apiKey)")!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.downloader.delegate = self
+        
         // Download rotten tomatoes file
-        let apiKey = "qe43pmsb84evcmyj43gbe7j8"
-        let url: NSURL! = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=\(apiKey)")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {(downloadedData, response, error) in
-            if let httpResponse = response as? NSHTTPURLResponse {
-                switch httpResponse.statusCode {
-                case 200:
-                    if let data = downloadedData,
-                        let json = (try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? NSDictionary,
-                        let moviesArray = json["movies"] as? [NSDictionary] {
-                            // Grab the main queue because NSURLSession can callback on any 
-                            // queue and we're touching non-atomic properties and the UI
-                            dispatch_async(dispatch_get_main_queue()) {
-                                self.moviesArray = moviesArray
-                                self.tableView.reloadData()
-                            }
-                    }
-                default:
-                    NSLog("Error downloading file: Response code \(httpResponse.statusCode)") // handle errors here
-                }
-            }
-        })
-        task.resume()
+        
+        self.downloader.beginDownloadingURL(self.jsonURL)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,24 +32,22 @@ class MovieListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieTableViewCell
-        if let moviesArray = self.moviesArray {
-            let movie = moviesArray[indexPath.row]
-            let movieTitle = movie["title"] as? String ?? "Title Not Found"
-            let movieDescription = movie["synopsis"] as? String ?? "Synopsys Not Found"
-            
-            cell?.moviePosterImageView.image = nil // Need to clear the image before we start downloading a new one.
-            cell?.movieTitleLabel.text = movieTitle
-            cell?.movieDescriptionLabel.text = movieDescription
-            
-            if let posterDictionary = movie["posters"] as? NSDictionary,
-                let posterURLString = posterDictionary["thumbnail"] as? String,
-                let posterURL = NSURL(string: posterURLString) {
-                    cell?.posterURL = posterURL
-                    self.downloadImageURL(posterURL, forCell: cell)
-            }
+        let optionalCell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieTableViewCell
+        guard let moviesArray = self.moviesArray else { fatalError() }
+        guard let cell = optionalCell else { fatalError() }
+        
+        let movie = moviesArray[indexPath.row]
+        if let posterDictionary = movie["posters"] as? NSDictionary,
+            let posterURLString = posterDictionary["thumbnail"] as? String,
+            let posterURL = NSURL(string: posterURLString) {
+                
+                let movieTitle = movie["title"] as? String ?? "Title Not Found"
+                let movieDescription = movie["synopsis"] as? String ?? "Synopsys Not Found"
+                
+                let movieModel = Movie(title: movieTitle, description: movieDescription, posterURL: posterURL)
+                cell.model = movieModel
         }
-        return cell!
+        return cell
     }
     
     func downloadImageURL(downloadURL: NSURL, forCell cell: MovieTableViewCell?) {
@@ -76,7 +61,6 @@ class MovieListTableViewController: UITableViewController {
                     dispatch_async(dispatch_get_main_queue()) {
                         if httpResponse.URL == cell?.posterURL {
                             let image = UIImage(data: downloadedData!)
-                            cell?.moviePosterImageView.image = image
                         } else {
                             // The URL's don't match. That means that the cell has been "Reused" since starting this download
                             // We can discard this download and do nothing
@@ -94,3 +78,44 @@ class MovieListTableViewController: UITableViewController {
     }
     
 }
+
+extension MovieListTableViewController: DownloaderDelegate {
+    func downloadFinishedForURL(finishedURL: NSURL) {
+        if finishedURL == self.jsonURL {
+            guard let downloadedData = self.downloader.dataForURL(finishedURL) else { return }
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(downloadedData, options: .AllowFragments)
+                if let jsonDictionary = json as? NSDictionary,
+                    let moviesArray = jsonDictionary["movies"] as? [NSDictionary] {
+                        // Grab the main queue because NSURLSession can callback on any
+                        // queue and we're touching non-atomic properties and the UI
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.moviesArray = moviesArray
+                            self.tableView.reloadData()
+                        }
+                }
+            } catch {
+                NSLog("MovieListTableViewController: Could not parse JSON from URL: \(finishedURL) – Error: \(error)")
+            }
+        } else {
+            // handle images here
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
