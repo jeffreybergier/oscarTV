@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  oscarTV_tvOS
+//  oscarTV
 //
 //  Created by Jeffrey Bergier on 10/9/15.
 //  Copyright © 2015 Saturday Apps. All rights reserved.
@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let movieListTableVC = MovieListTableViewController()
+        let navC = UINavigationController(rootViewController: movieListTableVC)
+        
+        if self.window == nil {
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        }
+        
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.rootViewController = navC
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

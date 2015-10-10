@@ -22,6 +22,10 @@ class MovieListTableViewController: UITableViewController {
         
         self.title = "Top Movies"
         
+        self.tableView.registerNib(UINib(nibName: "MovieTableViewCell", bundle: .None), forCellReuseIdentifier: "MovieCelliOS")
+        self.tableView.estimatedRowHeight = 104
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.downloader.delegate = self
         self.downloader.beginDownloadingURL(self.jsonURL)
     }
@@ -42,13 +46,18 @@ class MovieListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let optionalCell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieTableViewCell
+        let optionalCell = tableView.dequeueReusableCellWithIdentifier("MovieCelliOS") as? MovieTableViewCell
         guard let cell = optionalCell else { fatalError() }
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.moviesArray?.count ?? 0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 

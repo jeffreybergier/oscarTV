@@ -7,39 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7382CF731BC89F0A00095B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF721BC89F0A00095B8A /* AppDelegate.swift */; };
-		7382CF7A1BC89F0A00095B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7382CF791BC89F0A00095B8A /* Assets.xcassets */; };
 		7382CF7D1BC89F0A00095B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7382CF7B1BC89F0A00095B8A /* LaunchScreen.storyboard */; };
-		7382CF881BC89F2C00095B8A /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF841BC89F2C00095B8A /* Downloader.swift */; };
-		7382CF891BC89F2C00095B8A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF851BC89F2C00095B8A /* Movie.swift */; };
-		7382CF8A1BC89F2C00095B8A /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF861BC89F2C00095B8A /* MovieListTableViewController.swift */; };
-		7382CF8B1BC89F2C00095B8A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF871BC89F2C00095B8A /* MovieTableViewCell.swift */; };
-		7382CF901BC89F5800095B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7382CF8E1BC89F5800095B8A /* Main.storyboard */; };
-		73C17D751BC89FF200070598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D741BC89FF200070598 /* AppDelegate.swift */; };
-		73C17D7C1BC89FF200070598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C17D7B1BC89FF200070598 /* Assets.xcassets */; };
-		73C17D811BC8A00A00070598 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF841BC89F2C00095B8A /* Downloader.swift */; };
-		73C17D821BC8A00A00070598 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF851BC89F2C00095B8A /* Movie.swift */; };
-		73C17D831BC8A00A00070598 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF861BC89F2C00095B8A /* MovieListTableViewController.swift */; };
-		73C17D841BC8A00A00070598 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382CF871BC89F2C00095B8A /* MovieTableViewCell.swift */; };
-		73C17D8A1BC8A07B00070598 /* Main_tvOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C17D881BC8A07B00070598 /* Main_tvOS.storyboard */; };
+		73C17D981BC8A9BC00070598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D931BC8A9BC00070598 /* AppDelegate.swift */; };
+		73C17D991BC8A9BC00070598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D931BC8A9BC00070598 /* AppDelegate.swift */; };
+		73C17D9A1BC8A9BC00070598 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D941BC8A9BC00070598 /* Downloader.swift */; };
+		73C17D9B1BC8A9BC00070598 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D941BC8A9BC00070598 /* Downloader.swift */; };
+		73C17D9C1BC8A9BC00070598 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D951BC8A9BC00070598 /* Movie.swift */; };
+		73C17D9D1BC8A9BC00070598 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D951BC8A9BC00070598 /* Movie.swift */; };
+		73C17D9E1BC8A9BC00070598 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D961BC8A9BC00070598 /* MovieListTableViewController.swift */; };
+		73C17D9F1BC8A9BC00070598 /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D961BC8A9BC00070598 /* MovieListTableViewController.swift */; };
+		73C17DA01BC8A9BC00070598 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D971BC8A9BC00070598 /* MovieTableViewCell.swift */; };
+		73C17DA11BC8A9BC00070598 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C17D971BC8A9BC00070598 /* MovieTableViewCell.swift */; };
+		73C17DAE1BC8AB1E00070598 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C17DAC1BC8AB1400070598 /* MovieTableViewCell.xib */; };
+		73C17DB01BC8AB2800070598 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C17DAF1BC8AB2800070598 /* MovieTableViewCell.xib */; };
+		73C17DB21BC8AB4100070598 /* Images_iOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C17DB11BC8AB4100070598 /* Images_iOS.xcassets */; };
+		73C17DB41BC8AB5700070598 /* Images_tvOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C17DB31BC8AB5700070598 /* Images_tvOS.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7382CF6F1BC89F0A00095B8A /* oscarTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oscarTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7382CF721BC89F0A00095B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7382CF791BC89F0A00095B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7382CF7C1BC89F0A00095B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7382CF7E1BC89F0A00095B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7382CF841BC89F2C00095B8A /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
-		7382CF851BC89F2C00095B8A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		7382CF861BC89F2C00095B8A /* MovieListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
-		7382CF871BC89F2C00095B8A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		7382CF8F1BC89F5800095B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73C17D721BC89FF200070598 /* oscarTV_tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oscarTV_tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		73C17D741BC89FF200070598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73C17D7B1BC89FF200070598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C17D7D1BC89FF200070598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73C17D891BC8A07B00070598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_tvOS.storyboard; sourceTree = "<group>"; };
+		73C17D931BC8A9BC00070598 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CommonFiles/AppDelegate.swift; sourceTree = "<group>"; };
+		73C17D941BC8A9BC00070598 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = CommonFiles/Downloader.swift; sourceTree = "<group>"; };
+		73C17D951BC8A9BC00070598 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = CommonFiles/Movie.swift; sourceTree = "<group>"; };
+		73C17D961BC8A9BC00070598 /* MovieListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieListTableViewController.swift; path = CommonFiles/MovieListTableViewController.swift; sourceTree = "<group>"; };
+		73C17D971BC8A9BC00070598 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieTableViewCell.swift; path = CommonFiles/MovieTableViewCell.swift; sourceTree = "<group>"; };
+		73C17DAC1BC8AB1400070598 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieTableViewCell.xib; path = oscarTV_tvOS/MovieTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		73C17DAF1BC8AB2800070598 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		73C17DB11BC8AB4100070598 /* Images_iOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_iOS.xcassets; sourceTree = "<group>"; };
+		73C17DB31BC8AB5700070598 /* Images_tvOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_tvOS.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +62,7 @@
 		7382CF661BC89F0A00095B8A = {
 			isa = PBXGroup;
 			children = (
+				73C17D921BC8A9AA00070598 /* CommonFiles */,
 				7382CF711BC89F0A00095B8A /* oscarTV */,
 				73C17D731BC89FF200070598 /* oscarTV_tvOS */,
 				7382CF701BC89F0A00095B8A /* Products */,
@@ -81,15 +81,10 @@
 		7382CF711BC89F0A00095B8A /* oscarTV */ = {
 			isa = PBXGroup;
 			children = (
-				7382CF721BC89F0A00095B8A /* AppDelegate.swift */,
-				7382CF841BC89F2C00095B8A /* Downloader.swift */,
-				7382CF851BC89F2C00095B8A /* Movie.swift */,
-				7382CF861BC89F2C00095B8A /* MovieListTableViewController.swift */,
-				7382CF871BC89F2C00095B8A /* MovieTableViewCell.swift */,
-				7382CF8E1BC89F5800095B8A /* Main.storyboard */,
-				7382CF791BC89F0A00095B8A /* Assets.xcassets */,
+				73C17DAF1BC8AB2800070598 /* MovieTableViewCell.xib */,
 				7382CF7B1BC89F0A00095B8A /* LaunchScreen.storyboard */,
 				7382CF7E1BC89F0A00095B8A /* Info.plist */,
+				73C17DB11BC8AB4100070598 /* Images_iOS.xcassets */,
 			);
 			path = oscarTV;
 			sourceTree = "<group>";
@@ -97,12 +92,23 @@
 		73C17D731BC89FF200070598 /* oscarTV_tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				73C17D741BC89FF200070598 /* AppDelegate.swift */,
-				73C17D881BC8A07B00070598 /* Main_tvOS.storyboard */,
-				73C17D7B1BC89FF200070598 /* Assets.xcassets */,
+				73C17DAC1BC8AB1400070598 /* MovieTableViewCell.xib */,
 				73C17D7D1BC89FF200070598 /* Info.plist */,
+				73C17DB31BC8AB5700070598 /* Images_tvOS.xcassets */,
 			);
 			path = oscarTV_tvOS;
+			sourceTree = "<group>";
+		};
+		73C17D921BC8A9AA00070598 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				73C17D931BC8A9BC00070598 /* AppDelegate.swift */,
+				73C17D941BC8A9BC00070598 /* Downloader.swift */,
+				73C17D951BC8A9BC00070598 /* Movie.swift */,
+				73C17D961BC8A9BC00070598 /* MovieListTableViewController.swift */,
+				73C17D971BC8A9BC00070598 /* MovieTableViewCell.swift */,
+			);
+			name = CommonFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7382CF901BC89F5800095B8A /* Main.storyboard in Resources */,
+				73C17DB21BC8AB4100070598 /* Images_iOS.xcassets in Resources */,
+				73C17DB01BC8AB2800070598 /* MovieTableViewCell.xib in Resources */,
 				7382CF7D1BC89F0A00095B8A /* LaunchScreen.storyboard in Resources */,
-				7382CF7A1BC89F0A00095B8A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C17D7C1BC89FF200070598 /* Assets.xcassets in Resources */,
-				73C17D8A1BC8A07B00070598 /* Main_tvOS.storyboard in Resources */,
+				73C17DAE1BC8AB1E00070598 /* MovieTableViewCell.xib in Resources */,
+				73C17DB41BC8AB5700070598 /* Images_tvOS.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,11 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7382CF8B1BC89F2C00095B8A /* MovieTableViewCell.swift in Sources */,
-				7382CF8A1BC89F2C00095B8A /* MovieListTableViewController.swift in Sources */,
-				7382CF881BC89F2C00095B8A /* Downloader.swift in Sources */,
-				7382CF731BC89F0A00095B8A /* AppDelegate.swift in Sources */,
-				7382CF891BC89F2C00095B8A /* Movie.swift in Sources */,
+				73C17DA01BC8A9BC00070598 /* MovieTableViewCell.swift in Sources */,
+				73C17D9E1BC8A9BC00070598 /* MovieListTableViewController.swift in Sources */,
+				73C17D9A1BC8A9BC00070598 /* Downloader.swift in Sources */,
+				73C17D981BC8A9BC00070598 /* AppDelegate.swift in Sources */,
+				73C17D9C1BC8A9BC00070598 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C17D841BC8A00A00070598 /* MovieTableViewCell.swift in Sources */,
-				73C17D831BC8A00A00070598 /* MovieListTableViewController.swift in Sources */,
-				73C17D811BC8A00A00070598 /* Downloader.swift in Sources */,
-				73C17D751BC89FF200070598 /* AppDelegate.swift in Sources */,
-				73C17D821BC8A00A00070598 /* Movie.swift in Sources */,
+				73C17DA11BC8A9BC00070598 /* MovieTableViewCell.swift in Sources */,
+				73C17D9F1BC8A9BC00070598 /* MovieListTableViewController.swift in Sources */,
+				73C17D9B1BC8A9BC00070598 /* Downloader.swift in Sources */,
+				73C17D991BC8A9BC00070598 /* AppDelegate.swift in Sources */,
+				73C17D9D1BC8A9BC00070598 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,22 +242,6 @@
 				7382CF7C1BC89F0A00095B8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7382CF8E1BC89F5800095B8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7382CF8F1BC89F5800095B8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		73C17D881BC8A07B00070598 /* Main_tvOS.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73C17D891BC8A07B00070598 /* Base */,
-			);
-			name = Main_tvOS.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,12 +334,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oscarTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saturdayapps.oscarTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -357,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oscarTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -369,14 +362,16 @@
 		73C17D7E1BC89FF200070598 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oscarTV_tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.oscarTV-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -385,8 +380,9 @@
 		73C17D7F1BC89FF200070598 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oscarTV_tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -426,6 +422,7 @@
 				73C17D7F1BC89FF200070598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
