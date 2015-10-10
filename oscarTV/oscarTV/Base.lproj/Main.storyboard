@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x1x-uu-Hsq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Qo6-rC-JiU">
+            <objects>
+                <tableViewController id="Dp7-0g-bcS" customClass="MovieListTableViewController" customModule="oscarTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" id="YA1-FG-Zcv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="120" id="DWu-kX-tP6" customClass="MovieTableViewCell" customModule="oscarTV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DWu-kX-tP6" id="ON0-2j-Jct">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jlW-xS-116">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-1G-zvp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="104"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="jBd-b0-vKx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O78-Xw-hFz">
+                                                    <rect key="frame" x="78" y="0.0" width="226" height="104"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Sherlock Holmes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-Fv-QBU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="226" height="19.5"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3K-ck-xkA">
+                                                            <rect key="frame" x="0.0" y="19" width="226" height="84.5"/>
+                                                            <animations/>
+                                                            <string key="text">Directed by Guy Ritchie. With Robert Downey Jr., Jude Law, Jared Harris, Rachel McAdams. Sherlock Holmes and his sidekick Dr. Watson join forces to outwit and bring down their fiercest adversary, Professor Moriarty.</string>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </stackView>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="fkC-1G-zvp" firstAttribute="height" secondItem="jlW-xS-116" secondAttribute="height" id="xjh-7l-hg9"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jlW-xS-116" secondAttribute="bottom" id="2yi-m3-cMg"/>
+                                        <constraint firstAttribute="topMargin" secondItem="jlW-xS-116" secondAttribute="top" id="CMh-Ms-9Et"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jlW-xS-116" secondAttribute="trailing" id="pZX-6E-rUg"/>
+                                        <constraint firstItem="jlW-xS-116" firstAttribute="leading" secondItem="ON0-2j-Jct" secondAttribute="leadingMargin" id="vId-Ik-sfA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="movieDescriptionLabel" destination="D3K-ck-xkA" id="VAT-nd-qkq"/>
+                                    <outlet property="moviePosterImageView" destination="fkC-1G-zvp" id="4zZ-pn-7Tp"/>
+                                    <outlet property="movieTitleLabel" destination="af5-Fv-QBU" id="hnR-aY-CLi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dp7-0g-bcS" id="u3L-as-vDs"/>
+                            <outlet property="delegate" destination="Dp7-0g-bcS" id="JQz-pk-hts"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="axM-uw-O4J"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVf-VR-Xgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="635"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rMy-ia-m0b">
+            <objects>
+                <navigationController id="x1x-uu-Hsq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dv9-z4-oMc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dp7-0g-bcS" kind="relationship" relationship="rootViewController" id="Moo-S5-cxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COe-rC-B6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="635"/>
+        </scene>
+    </scenes>
+</document>
